@@ -19,13 +19,9 @@ You basically have three options to add this extension to your Silex project. We
 http://packagist.org/packages/fredjuvaux/silex-less-provider
 
 ```bash
-php composer.phar require fredjuvaux/silex-less-provider dev-master
+composer require fredjuvaux/silex-less-provider
 ```
 
-Or add to the dependencies in your projects composer.json file and update your dependencies::
-
-```bash
-"fredjuvaux/silex-less-provider": "dev-master"
 ```
 
 ```bash

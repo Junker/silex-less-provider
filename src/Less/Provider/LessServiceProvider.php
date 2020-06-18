@@ -25,12 +25,12 @@ class LessServiceProvider implements ServiceProviderInterface
 	const FORMATTER_COMPRESSED = 'compressed';
 
 
-	public function register(Application $app) 
+	public function register(Application $app)
 	{
 	}
 
 
-	public function boot(Application $app) 
+	public function boot(Application $app)
 	{
 
 		// Validate this params.
@@ -41,14 +41,14 @@ class LessServiceProvider implements ServiceProviderInterface
 		$sourcesDir = $app['less.source_dir'];
 		$cacheDir   = $app['less.cache_dir'];
 		$targetDir  = $app['less.target_dir'];
-		
+
 		$cacheContents = array();
 
 		foreach ($sourcesDir as $sourceDir) {
 
-			$files = scandir($sourceDir);			
+			$files = scandir($sourceDir);
 			foreach ($files as $file) {
-				
+
 				// if less file
 				if (substr($file, -5) === '.less') {
 
@@ -130,7 +130,7 @@ class LessServiceProvider implements ServiceProviderInterface
 	 * @throws \Exception
 	 *   If some params is not valid throw exception.
 	 */
-	private function validate(Application $app) 
+	private function validate(Application $app)
 	{
 
 		// Params must be defined.

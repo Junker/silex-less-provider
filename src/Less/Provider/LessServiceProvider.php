@@ -2,8 +2,8 @@
 
 namespace Less\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 
 /**
  * Create a LESS service provider to generate CSS file from LESS files
@@ -25,12 +25,12 @@ class LessServiceProvider implements ServiceProviderInterface
 	const FORMATTER_COMPRESSED = 'compressed';
 
 
-	public function register(Application $app)
+	public function register(Container $app)
 	{
 	}
 
 
-	public function boot(Application $app)
+	public function boot(Container $app)
 	{
 
 		// Validate this params.

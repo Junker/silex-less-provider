@@ -131,7 +131,7 @@ class LessServiceProvider implements ServiceProviderInterface, BootableProviderI
 	 * @throws \Exception
 	 *   If some params is not valid throw exception.
 	 */
-	private function validate(Application $app)
+	private function validate(Container $app)
 	{
 
 		// Params must be defined.

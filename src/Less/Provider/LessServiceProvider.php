@@ -4,11 +4,12 @@ namespace Less\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
+use Silex\Api\BootableProviderInterface;
 
 /**
  * Create a LESS service provider to generate CSS file from LESS files
  */
-class LessServiceProvider implements ServiceProviderInterface
+class LessServiceProvider implements ServiceProviderInterface, BootableProviderInterface
 {
 	/**
 	 * Value for classic CSS generated from LESS source files.
